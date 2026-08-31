@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO(Raj): uncomment once the site has a final domain and a sitemap exists.
+# Sitemap: https://REPLACE-WITH-FINAL-DOMAIN.example/sitemap.xml

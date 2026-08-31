@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Bir Lama — QA &amp; Software Testing</title>
+<meta name="description" content="Raj Bir Lama, QA and software testing based in Kathmandu. Manual and Playwright-automated test case design, defect reporting, and regression testing across e-commerce, API, and e-learning platforms.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raj Bir Lama — QA & Software Testing">
+<meta property="og:description" content="QA and software testing based in Kathmandu. 109 passed, 4 failed, 0 skipped — full test history across 3 projects.">
+<meta property="og:image" content="/assets/og-image.png">
+<!-- TODO(Raj): once the site has a final domain, set an absolute og:url here, e.g. https://your-domain.example/ -->
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Raj Bir Lama — QA & Software Testing">
+<meta name="twitter:description" content="QA and software testing based in Kathmandu. 109 passed, 4 failed, 0 skipped — full test history across 3 projects.">
+<meta name="twitter:image" content="/assets/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <button class="prompt mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span class="prompt-user">raj@qa</span>:~<span class="prompt-caret">$</span>
+    </button>
+    <span class="prompt" aria-hidden="true" style="cursor:default;">
+      <span class="prompt-user">raj@qa</span>:~<span class="prompt-caret">$</span>
+    </span>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <div class="case-studies-item">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">Case Studies</button>
+        <ul class="case-studies-sub">
+          <li><a href="#case-study-1">E-commerce QA</a></li>
+          <li><a href="#case-study-2">API Automation</a></li>
+          <li><a href="#case-study-3">E-learning QA</a></li>
+        </ul>
+      </div>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero container" id="hero">
+    <h1 class="hero-name">Raj Bir Lama</h1>
+    <p class="hero-role">QA and software testing, based in Kathmandu</p>
+
+    <div class="terminal-block">
+      <p class="cmd">run-tests --suite=case-study-1</p>
+      <p id="hero-output"><span class="n-pass">109 passed</span>, <span class="n-fail">4 failed</span>, 0 skipped</p>
+    </div>
+    <p class="hero-subline">Full test history across 3 projects below.</p>
+
+    <div class="hero-links">
+      <a class="primary" href="/assets/raj-bir-lama-cv.pdf">Download CV</a>
+      <a href="mailto:rajbirlama12@gmail.com">Email me</a>
+    </div>
+  </section>
+
+  <!-- Case Study 1: E-commerce -->
+  <section class="container" id="case-study-1">
+    <p class="section-label">case-study-1</p>
+    <h2>A furniture retail e-commerce platform</h2>
+
+    <p class="case-meta">
+      Self-initiated QA testing on a live e-commerce platform, carried out
+      alongside a separate primary role, as part of an internal systems
+      role.
+    </p>
+
+    <p class="stat-line">
+      Scope: <span class="num">109+</span> documented test cases
+      (TC_01&ndash;TC_109) across authentication, product pages, mobile
+      layout, promo banners, and the homepage.
+    </p>
+
+    <h3>What testing this platform turned up</h3>
+    <p>
+      Testing wasn't limited to the documented cases. Working through the
+      platform end to end, alongside the structured suite, surfaced four
+      real production defects:
+    </p>
+    <ol class="defect-list">
+      <li>A 500 server error on native login</li>
+      <li>Facebook OAuth login deactivated/non-functional</li>
+      <li>Broken links on promotional banners</li>
+      <li>A supplier watermark left visible on live product images</li>
+    </ol>
+
+    <p>
+      Each defect was documented and reported through the company's
+      internal reporting channel to the responsible manager. The value
+      here isn't just the count of bugs found &mdash; it's the combination
+      of exploratory testing instinct (catching issues a scripted test
+      wouldn't necessarily target, like a disabled OAuth provider) with
+      structured documentation that a team can actually act on.
+    </p>
+
+    <h3>Sample test case</h3>
+    <div class="record-panel">
+      <table>
+        <tbody>
+          <tr><th scope="row">Test Case ID</th><td>TC_10</td></tr>
+          <tr><th scope="row">Scenario</th><td>Comment Submission Without Login</td></tr>
+          <tr><th scope="row">Precondition</th><td>User is on a product page, not logged in</td></tr>
+          <tr><th scope="row">Steps</th><td>1. Attempt to type in comment box.<br>2. Attempt to submit.</td></tr>
+          <tr><th scope="row">Test Data</th><td>Comment: "test comment"</td></tr>
+          <tr><th scope="row">Expected Result</th><td>System blocks submission and prompts sign up or login</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="record-caption">One row, pulled directly from the documented test suite.</p>
+  </section>
+
+  <!-- Case Study 2: API automation -->
+  <section class="container" id="case-study-2">
+    <p class="section-label">case-study-2</p>
+    <h2>Automated API testing, Playwright + GitHub Actions</h2>
+
+    <p class="case-meta">
+      A Playwright-based API test suite against the DummyJSON public API,
+      wired into a GitHub Actions CI/CD pipeline so tests run
+      automatically on every push.
+    </p>
+
+    <p>
+      This project is a deliberate step from manual testing into
+      automation: writing test scripts in Playwright, running them in CI
+      rather than by hand, and working through a normal git/CLI workflow
+      to get there. It's built with Playwright specifically, not Selenium.
+    </p>
+
+    <p>
+      Repo: <span class="pending-note">GitHub link to be added.</span>
+    </p>
+  </section>
+
+  <!-- Case Study 3: E-learning -->
+  <section class="container" id="case-study-3">
+    <p class="section-label">case-study-3</p>
+    <h2>An IT training and e-learning platform</h2>
+
+    <p class="case-meta">
+      QA internship work: manual testing across the platform's course
+      catalog, consultation booking flow, registration, and general site
+      content.
+    </p>
+
+    <p class="stat-line">
+      Scope: <span class="num">111</span> documented test cases
+      (TC-071&ndash;TC-111 in the final extended suite), covering
+      authentication, course listings, consultation forms, cart,
+      registration field validation, and security/input hardening
+      checks.
+    </p>
+
+    <h3>Defects found</h3>
+    <ol class="defect-list">
+      <li>A broken link on the internship page (the course-certificate application link returned a 404)</li>
+      <li>A canonical URL pointing to a raw backend domain instead of the live site</li>
+      <li>Dynamic content failing to load on the courses page</li>
+      <li>Dynamic content failing to load on the internship page</li>
+      <li>Inconsistent navigation templates across pages</li>
+      <li>A raw file path rendering as visible text in the page header</li>
+      <li>Contradictory team member counts on the About page</li>
+      <li>Footer links inconsistent between <code>/blog</code> and <code>/blogs</code></li>
+      <li>Footer links inconsistent between <code>/privacy</code> and <code>/privacy-policy</code></li>
+    </ol>
+
+    <p>
+      Defects were logged and tracked through the internship's bug
+      tracking workflow, then verified with regression passes after
+      fixes were made.
+    </p>
+  </section>
+
+  <!-- Experience -->
+  <section class="container" id="experience">
+    <p class="section-label">experience</p>
+    <h2>Experience</h2>
+
+    <ul class="commit-log">
+      <li class="commit-entry">
+        <span class="commit-date">Aug 2026 &ndash; present</span>
+        <p class="commit-summary">
+          <strong>System Assistant</strong>, Q&amp;U (Kala Furniture
+          Industry Pvt. Ltd.) &mdash; inventory management via QR
+          scanning, plus self-initiated QA work described in
+          <a href="#case-study-1">Case Study 1</a> above.
+        </p>
+      </li>
+      <li class="commit-entry">
+        <span class="commit-date">Apr 2026 &ndash; Jun 2026</span>
+        <p class="commit-summary">
+          <strong>QA Intern</strong>, Digital Pathshala Pvt. Ltd.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section class="container" id="skills">
+    <p class="section-label">skills</p>
+    <h2>Skills</h2>
+
+    <dl class="manifest">
+      <dt>languages</dt>
+      <dd>Python, Java</dd>
+
+      <dt>testing_and_qa</dt>
+      <dd>Manual Testing, Test Case Design, Bug Reporting and Reproduction Steps, Defect Life Cycle, Regression Testing, Exploratory Testing, UAT, Functional and UI Testing</dd>
+
+      <dt>automation</dt>
+      <dd>Playwright, Python-based Test Scripting</dd>
+
+      <dt>tools</dt>
+      <dd>Git, GitHub Actions, Microsoft Office Suite</dd>
+
+      <dt>soft_skills</dt>
+      <dd>Attention to Detail, Analytical Thinking, Communication, Teamwork, Problem-Solving</dd>
+    </dl>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container" id="faq">
+    <p class="section-label">faq</p>
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <h3 class="faq-q">What's your approach to writing test cases?</h3>
+      <p class="faq-a">
+        I start from the user flow, not the code. For the e-commerce
+        testing, that meant walking through login, browsing, and checkout
+        the way a real customer would, then writing test cases for each
+        state, including the ones that aren't obvious, like what happens
+        with a broken OAuth provider or a slow network.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">Have you worked with test automation?</h3>
+      <p class="faq-a">
+        Yes. I built an API test suite with Playwright against the
+        DummyJSON API and wired it into GitHub Actions so tests run on
+        every push. Most of my testing background is manual, but I'm
+        comfortable writing and maintaining automated test scripts.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">How do you prioritize which bugs to report first?</h3>
+      <p class="faq-a">
+        Anything that blocks a core flow goes first, a login error that
+        returns a 500 status stops everything downstream. After that, I
+        look at visibility, a broken OAuth button or dead banner link is
+        something every visitor sees.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">Do you test across browsers and devices?</h3>
+      <p class="faq-a">
+        I've tested mobile layout specifically as part of my case study
+        work. I don't have a large device lab, so I lean on browser dev
+        tools and responsive testing to cover the common breakpoints, and
+        I say so plainly if a claim needs a real device to confirm.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">What testing tools and methods are you certified in?</h3>
+      <p class="faq-a">
+        I hold a QA and Software Testing certification from Broadway
+        Infosys, completed December 2025 to February 2026, covering
+        manual testing fundamentals, defect life cycle, and test case
+        design.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="container" id="contact">
+    <p class="section-label">contact</p>
+    <h2>Contact</h2>
+
+    <div class="contact-block">
+      <p class="contact-line"><span class="contact-label">email:</span> <a href="mailto:rajbirlama12@gmail.com">rajbirlama12@gmail.com</a></p>
+      <p class="contact-line"><span class="contact-label">linkedin:</span> <a href="https://linkedin.com/in/raj-lama-510371251">linkedin.com/in/raj-lama-510371251</a></p>
+
+      <div class="hero-links">
+        <a class="primary" href="/assets/raj-bir-lama-cv.pdf">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer container">
+  <p>&copy; 2026 Raj Bir Lama.</p>
+</footer>
+
+<script src="/assets/script.js"></script>
+</body>
+</html>
